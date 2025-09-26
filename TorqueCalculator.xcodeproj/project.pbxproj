@@ -1,0 +1,52 @@
+/* Minimal pbxproj generated for Codemagic compatibility */
+// !$*UTF8*$!
+{
+  archiveVersion = 1;
+  classes = {};
+  objectVersion = 55;
+  objects = {
+    111111111111111111111111 /* Project object */ = {
+      isa = PBXProject;
+      attributes = { LastUpgradeCheck = 1440; };
+      buildConfigurationList = 222222222222222222222222 /* Build configuration list */;
+      compatibilityVersion = "Xcode 14.0";
+      developmentRegion = en;
+      hasScannedForEncodings = 0;
+      knownRegions = ( en, Base, );
+      mainGroup = 333333333333333333333333;
+      productRefGroup = 444444444444444444444444;
+      projectDirPath = "";
+      projectRoot = "";
+      targets = ( 555555555555555555555555, );
+    };
+
+    333333333333333333333333 = { isa = PBXGroup; children = ( 666666666666666666666666 /* AppDelegate.swift */, 777777777777777777777777 /* ViewController.swift */, 888888888888888888888888 /* Main.storyboard */, 999999999999999999999999 /* Assets.xcassets */, aaaaaaaaaaaaaaaaaaaaaaaa /* Info.plist */ ); sourceTree = "<group>"; };
+    444444444444444444444444 = { isa = PBXGroup; children = ( bbbbbbbbbbbbbbbbbbbbbbbb /* Products */ ); name = "Products"; sourceTree = "<group>"; };
+
+    666666666666666666666666 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+    777777777777777777777777 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ViewController.swift; sourceTree = "<group>"; };
+    888888888888888888888888 = { isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+    999999999999999999999999 = { isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Assets.xcassets; sourceTree = "<group>"; };
+    aaaaaaaaaaaaaaaaaaaaaaaa = { isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Info.plist; sourceTree = "<group>"; };
+    bbbbbbbbbbbbbbbbbbbbbbbb = { isa = PBXFileReference; lastKnownFileType = wrapper.application; name = TorqueCalculator.app; path = Products/TorqueCalculator.app; sourceTree = "<group>"; };
+
+    cccccccccccccccccccccccc = { isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = ( dddddddddddddddddddddddd /* AppDelegate.swift in Sources */, eeeeeeeeeeeeeeeeeeeeeeee /* ViewController.swift in Sources */ ); runOnlyForDeploymentPostprocessing = 0; };
+    dddddddddddddddddddddddd = { isa = PBXBuildFile; fileRef = 666666666666666666666666; };
+    eeeeeeeeeeeeeeeeeeeeeeee = { isa = PBXBuildFile; fileRef = 777777777777777777777777; };
+
+    ffffffffffffffffffffffff = { isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = ( gggggggggggggggggggggggg /* Main.storyboard in Resources */, hhhhhhhhhhhhhhhhhhhhhhhh /* Assets.xcassets in Resources */, iiiiiiiiiiiiiiiiiiiiiiii /* Info.plist in Resources */ ); runOnlyForDeploymentPostprocessing = 0; };
+    gggggggggggggggggggggggg = { isa = PBXBuildFile; fileRef = 888888888888888888888888; };
+    hhhhhhhhhhhhhhhhhhhhhhhh = { isa = PBXBuildFile; fileRef = 999999999999999999999999; };
+    iiiiiiiiiiiiiiiiiiiiiiii = { isa = PBXBuildFile; fileRef = aaaaaaaaaaaaaaaaaaaaaaaa; };
+
+    555555555555555555555555 = { isa = PBXNativeTarget; buildConfigurationList = 222222222222222222222223; buildPhases = ( cccccccccccccccccccccccc, ffffffffffffffffffffffff ); name = "TorqueCalculator"; productName = "TorqueCalculator"; productReference = bbbbbbbbbbbbbbbbbbbbbbbb; productType = "com.apple.product-type.application"; };
+
+    222222222222222222222222 = { isa = XCConfigurationList; buildConfigurations = ( 121212121212121212121212, 131313131313131313131313 ); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+    222222222222222222222223 = { isa = XCConfigurationList; buildConfigurations = ( 121212121212121212121212, 131313131313131313131313 ); defaultConfigurationName = Release; };
+
+    121212121212121212121212 = { isa = XCBuildConfiguration; buildSettings = { INFOPLIST_FILE = "TorqueCalculator/Info.plist"; PRODUCT_BUNDLE_IDENTIFIER = "com.yourname.torquecalculator"; DEVELOPMENT_TEAM = ""; SWIFT_VERSION = "5.0"; IPHONEOS_DEPLOYMENT_TARGET = "16.0"; }; name = Debug; };
+    131313131313131313131313 = { isa = XCBuildConfiguration; buildSettings = { INFOPLIST_FILE = "TorqueCalculator/Info.plist"; PRODUCT_BUNDLE_IDENTIFIER = "com.yourname.torquecalculator"; DEVELOPMENT_TEAM = ""; SWIFT_VERSION = "5.0"; IPHONEOS_DEPLOYMENT_TARGET = "16.0"; }; name = Release; };
+
+  };
+  rootObject = 111111111111111111111111 /* Project object */;
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+  <scenes>
+    <scene sceneID="launch">
+      <objects>
+        <viewController id="LaunchVC">
+          <view key="view" id="view-launch">
+            <subviews>
+              <label text="Torque Calculator" id="label-launch"/>
+            </subviews>
+          </view>
+        </viewController>
+      </objects>
+    </scene>
+  </scenes>
+</document>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+  <scenes>
+    <scene sceneID="scene-1">
+      <objects>
+        <viewController id="VC1" customClass="ViewController" customModule="TorqueCalculator" sceneMemberID="viewController">
+          <view key="view" contentMode="scaleToFill" id="view-1">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="844"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <subviews>
+              <stackView axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="stack-1">
+                <arrangedSubviews>
+                  <segmentedControl id="modeSeg" translatesAutoresizingMaskIntoConstraints="NO">
+                    <segments>
+                      <segment title="Torque"/>
+                      <segment title="Mass"/>
+                    </segments>
+                  </segmentedControl>
+                  <stackView axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="inputsStack">
+                    <arrangedSubviews>
+                      <stackView axis="horizontal" spacing="8" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="row1">
+                        <arrangedSubviews>
+                          <label id="input1Label" text="Mass (kg)" translatesAutoresizingMaskIntoConstraints="NO"/>
+                          <textField id="input1Field" placeholder="e.g. 10" translatesAutoresizingMaskIntoConstraints="NO"/>
+                        </arrangedSubviews>
+                      </stackView>
+                      <stackView axis="horizontal" spacing="8" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="row2">
+                        <arrangedSubviews>
+                          <label id="input2Label" text="Distance (m)" translatesAutoresizingMaskIntoConstraints="NO"/>
+                          <textField id="input2Field" placeholder="e.g. 0.5" translatesAutoresizingMaskIntoConstraints="NO"/>
+                        </arrangedSubviews>
+                      </stackView>
+                    </arrangedSubviews>
+                  </stackView>
+                  <button id="calcButton" translatesAutoresizingMaskIntoConstraints="NO">
+                    <state key="normal" title="Calculate"/>
+                  </button>
+                  <label id="resultLabel" text="" translatesAutoresizingMaskIntoConstraints="NO"/>
+                </arrangedSubviews>
+              </stackView>
+            </subviews>
+            <constraints>
+              <constraint firstItem="stack-1" firstAttribute="centerX" secondItem="view-1" secondAttribute="centerX" id="c1"/>
+              <constraint firstItem="stack-1" firstAttribute="top" secondItem="view-1" secondAttribute="safeAreaTop" constant="20" id="c2"/>
+              <constraint firstItem="stack-1" firstAttribute="leading" secondItem="view-1" secondAttribute="leading" constant="20" id="c3"/>
+              <constraint firstItem="stack-1" firstAttribute="trailing" secondItem="view-1" secondAttribute="trailing" constant="-20" id="c4"/>
+            </constraints>
+          </view>
+          <connections>
+            <outlet property="modeSegment" destination="modeSeg" id="outlet-mode"/>
+            <outlet property="input1Label" destination="input1Label" id="outlet-l1"/>
+            <outlet property="input2Label" destination="input2Label" id="outlet-l2"/>
+            <outlet property="input1Field" destination="input1Field" id="outlet-f1"/>
+            <outlet property="input2Field" destination="input2Field" id="outlet-f2"/>
+            <outlet property="calculateButton" destination="calcButton" id="outlet-calc"/>
+            <outlet property="resultLabel" destination="resultLabel" id="outlet-result"/>
+            <action selector="modeChanged:" destination="VC1" eventType="valueChanged" id="action-mode"/>
+            <action selector="calculateTapped:" destination="VC1" eventType="touchUpInside" id="action-calc"/>
+          </connections>
+        </viewController>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="firstResponder" userLabel="First Responder" sceneMemberID="firstResponder"/>
+      </objects>
+      <point key="canvasLocation" x="0" y="0"/>
+    </scene>
+  </scenes>
+</document>
