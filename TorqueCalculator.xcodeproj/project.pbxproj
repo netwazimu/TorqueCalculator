@@ -45,8 +45,8 @@
     222222222222222222222222 = { isa = XCConfigurationList; buildConfigurations = ( 121212121212121212121212, 131313131313131313131313 ); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
     222222222222222222222223 = { isa = XCConfigurationList; buildConfigurations = ( 121212121212121212121212, 131313131313131313131313 ); defaultConfigurationName = Release; };
 
-    121212121212121212121212 = { isa = XCBuildConfiguration; buildSettings = { INFOPLIST_FILE = "TorqueCalculator/Info.plist"; PRODUCT_NAME = "TorqueCalculator"; PRODUCT_BUNDLE_IDENTIFIER = "com.yourname.torquecalculator"; DEVELOPMENT_TEAM = ""; SWIFT_VERSION = "5.0"; IPHONEOS_DEPLOYMENT_TARGET = "16.0"; }; name = Debug; };
-    131313131313131313131313 = { isa = XCBuildConfiguration; buildSettings = { INFOPLIST_FILE = "TorqueCalculator/Info.plist"; PRODUCT_NAME = "TorqueCalculator"; PRODUCT_BUNDLE_IDENTIFIER = "com.yourname.torquecalculator"; DEVELOPMENT_TEAM = ""; SWIFT_VERSION = "5.0"; IPHONEOS_DEPLOYMENT_TARGET = "16.0"; }; name = Release; };
+    121212121212121212121212 = { isa = XCBuildConfiguration; buildSettings = { INFOPLIST_FILE = "Info.plist"; PRODUCT_NAME = "TorqueCalculator"; PRODUCT_BUNDLE_IDENTIFIER = "com.yourname.torquecalculator"; DEVELOPMENT_TEAM = ""; SWIFT_VERSION = "5.0"; IPHONEOS_DEPLOYMENT_TARGET = "16.0"; }; name = Debug; };
+    131313131313131313131313 = { isa = XCBuildConfiguration; buildSettings = { INFOPLIST_FILE = "Info.plist"; PRODUCT_NAME = "TorqueCalculator"; PRODUCT_BUNDLE_IDENTIFIER = "com.yourname.torquecalculator"; DEVELOPMENT_TEAM = ""; SWIFT_VERSION = "5.0"; IPHONEOS_DEPLOYMENT_TARGET = "16.0"; }; name = Release; };
 
   };
   rootObject = 111111111111111111111111 /* Project object */;
