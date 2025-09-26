@@ -34,10 +34,11 @@
     dddddddddddddddddddddddd = { isa = PBXBuildFile; fileRef = 666666666666666666666666; };
     eeeeeeeeeeeeeeeeeeeeeeee = { isa = PBXBuildFile; fileRef = 777777777777777777777777; };
 
-    ffffffffffffffffffffffff = { isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = ( gggggggggggggggggggggggg /* Main.storyboard in Resources */, hhhhhhhhhhhhhhhhhhhhhhhh /* Assets.xcassets in Resources */, iiiiiiiiiiiiiiiiiiiiiiii /* Info.plist in Resources */ ); runOnlyForDeploymentPostprocessing = 0; };
+    /* Resources build phase: INFO.PLIST removed from resources to avoid duplicate outputs */
+    ffffffffffffffffffffffff = { isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = ( gggggggggggggggggggggggg /* Main.storyboard in Resources */, hhhhhhhhhhhhhhhhhhhhhhhh /* Assets.xcassets in Resources */ ); runOnlyForDeploymentPostprocessing = 0; };
     gggggggggggggggggggggggg = { isa = PBXBuildFile; fileRef = 888888888888888888888888; };
     hhhhhhhhhhhhhhhhhhhhhhhh = { isa = PBXBuildFile; fileRef = 999999999999999999999999; };
-    iiiiiiiiiiiiiiiiiiiiiiii = { isa = PBXBuildFile; fileRef = aaaaaaaaaaaaaaaaaaaaaaaa; };
+    /* previously there was a build file here for Info.plist; removed to prevent duplicate output */
 
     555555555555555555555555 = { isa = PBXNativeTarget; buildConfigurationList = 222222222222222222222223; buildPhases = ( cccccccccccccccccccccccc, ffffffffffffffffffffffff ); name = "TorqueCalculator"; productName = "TorqueCalculator"; productReference = bbbbbbbbbbbbbbbbbbbbbbbb; productType = "com.apple.product-type.application"; };
 
