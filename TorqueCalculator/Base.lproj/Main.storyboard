@@ -1,51 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES">
   <scenes>
+    <!-- Main Scene -->
     <scene sceneID="scene-1">
       <objects>
         <viewController id="VC1" customClass="ViewController" customModule="TorqueCalculator" sceneMemberID="viewController">
           <view key="view" contentMode="scaleToFill" id="view-1">
-            <rect key="frame" x="0.0" y="0.0" width="393" height="844"/>
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <subviews>
-              <stackView axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="stack-1">
-                <arrangedSubviews>
-                  <segmentedControl id="modeSeg" translatesAutoresizingMaskIntoConstraints="NO">
-                    <segments>
-                      <segment title="Torque"/>
-                      <segment title="Mass"/>
-                    </segments>
-                  </segmentedControl>
-                  <stackView axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="inputsStack">
-                    <arrangedSubviews>
-                      <stackView axis="horizontal" spacing="8" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="row1">
-                        <arrangedSubviews>
-                          <label id="input1Label" text="Mass (kg)" translatesAutoresizingMaskIntoConstraints="NO"/>
-                          <textField id="input1Field" placeholder="e.g. 10" translatesAutoresizingMaskIntoConstraints="NO"/>
-                        </arrangedSubviews>
-                      </stackView>
-                      <stackView axis="horizontal" spacing="8" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="row2">
-                        <arrangedSubviews>
-                          <label id="input2Label" text="Distance (m)" translatesAutoresizingMaskIntoConstraints="NO"/>
-                          <textField id="input2Field" placeholder="e.g. 0.5" translatesAutoresizingMaskIntoConstraints="NO"/>
-                        </arrangedSubviews>
-                      </stackView>
-                    </arrangedSubviews>
+              <!-- Center Container for iPad -->
+              <view id="containerView" translatesAutoresizingMaskIntoConstraints="NO">
+                <subviews>
+                  <!-- Root Stack -->
+                  <stackView id="stack-1" spacing="16" translatesAutoresizingMaskIntoConstraints="NO">
+                    <variation key="widthClass=compact" axis="vertical"/>   <!-- iPhone Portrait -->
+                    <variation key="widthClass=regular" axis="horizontal"/> <!-- iPhone Landscape + iPad -->
+
+                    <!-- Mode Selector -->
+                    <segmentedControl id="modeSeg" translatesAutoresizingMaskIntoConstraints="NO">
+                      <segments>
+                        <segment title="Torque"/>
+                        <segment title="Mass"/>
+                      </segments>
+                    </segmentedControl>
+
+                    <!-- Inputs -->
+                    <stackView id="inputsStack" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO">
+                      <arrangedSubviews>
+                        <stackView id="row1" axis="horizontal" spacing="8" alignment="fill" translatesAutoresizingMaskIntoConstraints="NO">
+                          <arrangedSubviews>
+                            <label id="input1Label" text="Mass (kg)" translatesAutoresizingMaskIntoConstraints="NO">
+                              <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            </label>
+                            <textField id="input1Field" placeholder="e.g. 10" borderStyle="roundedRect" translatesAutoresizingMaskIntoConstraints="NO"/>
+                          </arrangedSubviews>
+                        </stackView>
+                        <stackView id="row2" axis="horizontal" spacing="8" alignment="fill" translatesAutoresizingMaskIntoConstraints="NO">
+                          <arrangedSubviews>
+                            <label id="input2Label" text="Distance (m)" translatesAutoresizingMaskIntoConstraints="NO">
+                              <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            </label>
+                            <textField id="input2Field" placeholder="e.g. 0.5" borderStyle="roundedRect" translatesAutoresizingMaskIntoConstraints="NO"/>
+                          </arrangedSubviews>
+                        </stackView>
+                      </arrangedSubviews>
+                    </stackView>
+
+                    <!-- Calculate Button -->
+                    <button id="calcButton" translatesAutoresizingMaskIntoConstraints="NO">
+                      <state key="normal" title="Calculate"/>
+                    </button>
+
+                    <!-- Result Label -->
+                    <label id="resultLabel" text="" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO">
+                      <fontDescription key="fontDescription" type="system" pointSize="18" weight="semibold"/>
+                      <color key="textColor" red="0" green="0" blue="0" alpha="1" colorSpace="calibratedRGB"/>
+                    </label>
                   </stackView>
-                  <button id="calcButton" translatesAutoresizingMaskIntoConstraints="NO">
-                    <state key="normal" title="Calculate"/>
-                  </button>
-                  <label id="resultLabel" text="" translatesAutoresizingMaskIntoConstraints="NO"/>
-                </arrangedSubviews>
-              </stackView>
+                </subviews>
+
+                <!-- Container Constraints -->
+                <constraints>
+                  <constraint firstItem="stack-1" firstAttribute="top" secondItem="containerView" secondAttribute="top" constant="20" id="cv1"/>
+                  <constraint firstItem="stack-1" firstAttribute="leading" secondItem="containerView" secondAttribute="leading" constant="20" id="cv2"/>
+                  <constraint firstItem="stack-1" firstAttribute="trailing" secondItem="containerView" secondAttribute="trailing" constant="-20" id="cv3"/>
+                  <constraint firstItem="stack-1" firstAttribute="bottom" secondItem="containerView" secondAttribute="bottom" constant="-20" id="cv4"/>
+                  <!-- Limit max width for iPad -->
+                  <constraint firstAttribute="width" relation="lessThanOrEqual" constant="500" id="cv5"/>
+                </constraints>
+              </view>
             </subviews>
+
+            <!-- View Constraints -->
             <constraints>
-              <constraint firstItem="stack-1" firstAttribute="centerX" secondItem="view-1" secondAttribute="centerX" id="c1"/>
-              <constraint firstItem="stack-1" firstAttribute="top" secondItem="view-1" secondAttribute="safeAreaTop" constant="20" id="c2"/>
-              <constraint firstItem="stack-1" firstAttribute="leading" secondItem="view-1" secondAttribute="leading" constant="20" id="c3"/>
-              <constraint firstItem="stack-1" firstAttribute="trailing" secondItem="view-1" secondAttribute="trailing" constant="-20" id="c4"/>
+              <constraint firstItem="containerView" firstAttribute="centerX" secondItem="view-1" secondAttribute="centerX" id="c1"/>
+              <constraint firstItem="containerView" firstAttribute="centerY" secondItem="view-1" secondAttribute="centerY" id="c2"/>
+              <constraint firstItem="containerView" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="view-1" secondAttribute="leading" constant="20" id="c3"/>
+              <constraint firstItem="containerView" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="view-1" secondAttribute="trailing" constant="-20" id="c4"/>
             </constraints>
           </view>
+
+          <!-- Connections -->
           <connections>
             <outlet property="modeSegment" destination="modeSeg" id="outlet-mode"/>
             <outlet property="input1Label" destination="input1Label" id="outlet-l1"/>
